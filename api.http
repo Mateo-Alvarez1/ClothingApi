@@ -1,7 +1,7 @@
 ### PRODUCT
 
 ### GET ALL
-GET http://localhost:3000/product/getAll
+GET https://clothingapi-dev-aepd.3.us-1.fl0.io/product/getAll
 
 ### GET BY ID
 GET http://localhost:3000/product/1
