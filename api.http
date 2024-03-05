@@ -1,0 +1,90 @@
+### PRODUCT
+
+### GET ALL
+GET http://localhost:3000/product/getAll
+
+### GET BY ID
+GET http://localhost:3000/product/1
+
+### CREATE PRODUCT
+POST http://localhost:3000/product
+Content-Type: application/json
+
+{
+    "name":"White Ripped Short",
+    "description":"Introducing our versatile and comfortable shorts, perfect for casual outings or active days. Crafted from lightweight and breathable fabric, these shorts offer a comfortable and stylish option for warm weather." ,
+    "color":"White" ,   
+    "categoryId": 3, 
+    "price": 24000,
+    "stock": 5,
+    "img_link":"https://clothingapi.s3.amazonaws.com/clothingapi-images/bermudas/bermuda-blanca-roturas.jpg"
+}
+
+### DELETE PRODUCT
+DELETE http://localhost:3000/product/2
+
+### UPDATE PRODUCT
+PATCH http://localhost:3000/product/1
+Content-Type: application/json
+
+{
+    "name":"Imported Cargo",
+    "description":"Imported cargo pant combines style and functionality to meet the demands of an active, urban lifestyle." ,
+    "color":"Black" ,
+    "categoryId": 1, 
+    "price": 35000,
+    "stock": 5,
+    "img_link":"https://clothingapi.s3.amazonaws.com/clothingapi-images/pantalones/cargos/cargo-importado-negro.jpeg"
+}
+
+### CATEGORY
+
+### GET ALL
+GET http://localhost:3000/category/getAll
+
+### GET BY ID 
+GET http://localhost:3000/category/1
+
+### CREATE 
+POST http://localhost:3000/category
+Content-Type: application/json
+
+{
+    "name":"Shorts"
+}
+
+### DELETE CATEGORY
+DELETE http://localhost:3000/category/1
+
+### UPDATE CATEGORY
+PATCH http://localhost:3000/category/1
+Content-Type: application/json
+
+{
+    "name":"t-shirt"
+}
+
+
+### AUTH
+### CREATE USER 
+POST http://localhost:3000/auth/signup
+Content-Type: application/json
+
+{
+    "name":"Mateo",
+    "lastname":"Alvarez",
+    "email":"mateoalvarez@gmail.com",
+    "password":"test123"
+}
+### INGRESAR CON USUARIO EXISTENTE
+POST http://localhost:3000/auth/login
+Content-Type: application/json
+
+{
+    "email":"mateoalvarez@gmail.com",
+    "password":"test123"
+}
+
+
+### BUSCAR USUARIO ESPECIFICO
+GET http://localhost:3000/auth/mateoalvarez@gmail.com
