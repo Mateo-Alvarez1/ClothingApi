@@ -26,7 +26,7 @@ db.execute(
 )
 
 db.execute(
-    `CREATE TABLE IF NOT EXISTS category(
+    `CREATE TABLE IF NOT EXISTS category( 
         id INTEGER PRIMARY KEY AUTOINCREMENT ,
         name VARCHAR(100)
 );`)
